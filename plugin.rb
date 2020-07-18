@@ -95,6 +95,12 @@ SQL
 
       post.custom_fields["is_accepted_answer"] = "true"
       topic.custom_fields["accepted_answer_post_id"] = post.id
+      # makes plugin recognize tags
+      needs_support_tag = Tag.find_or_create_by(name: 'Needs Support')
+      supported_tag = Tag.find_or_create_by(name: 'Supported')
+      # because user accepted support, deletes 'needs support' tag and adds 'supported' tag.
+      topic.tags.delete needs_support_tag
+      topic.tags << supported_tag
 
       if defined?(UserAction::SOLVED)
         UserAction.log_action!(
@@ -179,6 +185,13 @@ SQL
           target_post_id: post.id
         ).destroy_all
       end
+
+      # makes plugin recognize tags
+      needs_support_tag = Tag.find_or_create_by(name: 'Needs Support')
+      supported_tag = Tag.find_or_create_by(name: 'Supported')
+      # because user unaccepted support, deletes 'supported' tag and adds 'needs support' tag.
+      topic.tags.delete supported_tag
+      # topic.tags << needs_support_tag
 
       # yank notification
       notification = Notification.find_by(
