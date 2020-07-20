@@ -6,32 +6,32 @@ en:
           accepted_notification: "accepted"
 
     solved:
-      title: "Solved"
+      title: "Supported"
       allow_accepted_answers: "Allow topic owner and staff to mark a reply as the solution"
-      accept_answer: "Select if this reply solves the problem"
-      accepted_description: "This is the accepted solution to this topic"
-      has_no_accepted_answer: "This topic has no solution"
+      accept_answer: "Select if this reply satisfies your request for support"
+      accepted_description: "This is the primary response I felt supported by"
+      has_no_accepted_answer: "This topic has not yet been supported"
       unaccept_answer: "Unselect if this reply no longer solves the problem"
-      accepted_answer: "Solution"
-      solution: "Solution"
+      accepted_answer: "Supported"
+      solution: "Supported"
       solution_summary:
         one: "solution"
         other: "solutions"
-      accepted_html: "%{icon} Solved <span class='by'>by <a href data-user-card='%{username_lower}'>%{username}</a></span> in <a href='%{post_path}' class='back'>post #%{post_number}</a>"
+      accepted_html: "%{icon} Supported <span class='by'>by <a href data-user-card='%{username_lower}'>%{username}</a></span> in <a href='%{post_path}' class='back'>post #%{post_number}</a>"
       accepted_notification: "<p><span>%{username}</span> %{description}</p>"
       topic_status_filter:
         all: "all"
-        solved: "solved"
-        unsolved: "unsolved"
+        solved: "supported"
+        unsolved: "unsupported"
 
     topic_statuses:
       solved:
-        help: "This topic has a solution"
+        help: "This topic has been supported"
 
     search:
       advanced:
         statuses:
-          solved: "are solved"
+          solved: "are supported"
 
     admin:
       web_hooks:
