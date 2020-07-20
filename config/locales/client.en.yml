@@ -8,10 +8,10 @@ en:
     solved:
       title: "Supported"
       allow_accepted_answers: "Allow topic owner and staff to mark a reply as the solution"
-      accept_answer: "Select if this reply satisfies your request for support"
-      accepted_description: "This is the primary response I felt supported by"
-      has_no_accepted_answer: "This topic has not yet been supported"
-      unaccept_answer: "Unselect if this reply no longer solves the problem"
+      accept_answer: "Select if this reply satisfies your request for support."
+      accepted_description: "This is the primary response I felt supported by."
+      has_no_accepted_answer: "This topic has not yet been supported."
+      unaccept_answer: "Unselect if this is not the reply that most supported you."
       accepted_answer: "Supported"
       solution: "Supported"
       solution_summary:
