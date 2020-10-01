@@ -96,7 +96,7 @@ SQL
       post.custom_fields["is_accepted_answer"] = "true"
       topic.custom_fields["accepted_answer_post_id"] = post.id
       # heartsupport tags
-      needs_support_tag = Tag.find_or_create_by(name: 'Needs Support')
+      needs_support_tag = Tag.find_or_create_by(name: 'Needs-Support')
       supported_tag = Tag.find_or_create_by(name: 'Supported')
       # accepting a post as supportive deletes needs support tag and adds supported tag
       topic.tags.delete needs_support_tag
@@ -189,7 +189,7 @@ SQL
       end
 
       # heartsupport tags
-      needs_support_tag = Tag.find_or_create_by(name: 'Needs Support')
+      needs_support_tag = Tag.find_or_create_by(name: 'Needs-Support')
       supported_tag = Tag.find_or_create_by(name: 'Supported')
       # since the user unaccepted support, remove the supported tag.
       topic.tags.delete supported_tag
